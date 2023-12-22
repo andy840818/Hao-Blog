@@ -1,0 +1,16 @@
+<%= form_with(model:@article  , data:{ trubo: false } ) do |f| %>
+
+  <div>
+    <%= f.label :title, '標題' %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :content, '內文' %>
+    <%= f.text_area :content  %>
+  </div>
+
+  <div>
+    <%=f.submit %>
+  </div>
+<% end %>
