@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Button */
+
+.submit-btn {
+  @apply lg:text-xl bg-[#5ba4ee] rounded-lg px-4 py-2 text-white cursor-pointer select-none hover:bg-[#7cb4eb] hover:duration-300
+}
