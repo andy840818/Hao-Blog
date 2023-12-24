@@ -1,0 +1,14 @@
+<h1 class="text-2xl"> <%= @article.title %> </h1>
+
+<article>
+  <%= @article.created_at %>
+  <%= @article.content %>
+
+  <div>
+    <%= link_to '編輯', edit_article_path %>
+  </div>
+
+  <div>
+    <%= link_to '刪除', article_path, data: {turbo_method: 'delete', turbo_confirm: '確定刪除?' } %>
+  </div>
+</article>

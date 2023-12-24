@@ -1,3 +1,13 @@
-<h1 class="text-2xl"> HAO的小窩 </h1>
+<%= link_to '新增文章', new_article_path %>
 
-<%= link_to '新增文章' new_article_path %>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article_path(article) do %>
+          <%= article.title %>
+          <%= article.content.truncate(100) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+

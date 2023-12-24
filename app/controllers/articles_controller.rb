@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @article = Article.order(:id :desc)
+    @articles = Article.order(id: :desc)
   end
   
   def show
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to article_path, notice: "新增成功 "
+      redirect_to articles_path, notice: "新增成功 "
     end
   end
 
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to article_path, notice: '刪除成功'
+    redirect_to articles_path, notice: '刪除成功'
   end
 
   private
@@ -43,6 +43,6 @@ class ArticlesController < ApplicationController
   end
   
   def article_params
-    params.require(:article).permite(:title, :content)
+    params.require(:article).permit(:title, :content)
   end
 end

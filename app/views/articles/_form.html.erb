@@ -2,15 +2,16 @@
 
   <div>
     <%= f.label :title, '標題' %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class:'shadow-md border border-slate-500'%>
   </div>
 
   <div>
     <%= f.label :content, '內文' %>
-    <%= f.text_area :content  %>
+    <%= f.text_area :content, class:'shadow-md border border-slate-500'  %>
   </div>
 
   <div>
-    <%=f.submit %>
+    <%=f.submit '送出', class:'submit-btn' %>
   </div>
+  
 <% end %>
