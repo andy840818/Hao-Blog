@@ -7,3 +7,7 @@
 .submit-btn {
   @apply lg:text-xl bg-[#5ba4ee] rounded-lg px-4 py-2 text-white cursor-pointer select-none hover:bg-[#7cb4eb] hover:duration-300
 }
+
+.write-btn {
+  @apply rounded-xl p-2 text-black cursor-pointer select-none bg-[#ff4949] hover:bg-[#ff6d6d] hover:duration-300
+}

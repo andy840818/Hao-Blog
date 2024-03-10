@@ -2,7 +2,7 @@
 
 <article>
   <%= @article.created_at %>
-  <%= @article.content %>
+  <%= raw @article.content %>
 
   <div>
     <%= link_to '編輯', edit_article_path %>
